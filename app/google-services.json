@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "577070254983",
+    "project_id": "coinify-2",
+    "storage_bucket": "coinify-2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577070254983:android:5fa8b9d4ea96ad5f3f6122",
+        "android_client_info": {
+          "package_name": "com.example.coinify_2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVwadp1NmQJjlTmOQ1GYyhj0yd0IC9MDQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
