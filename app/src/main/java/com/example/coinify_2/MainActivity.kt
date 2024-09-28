@@ -8,11 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         // إعداد Firebase
         firebaseAuth = FirebaseAuth.getInstance()
-        database = FirebaseDatabase.getInstance().getReference("users")
+        database = FirebaseDatabase.getInstance().getReference("Users") // تم تعديل المسار ليكون "users"
 
         // مرجع لعنصر عرض العملات
         coinCountTextView = findViewById(R.id.coin_count_text)
@@ -88,8 +84,12 @@ class MainActivity : AppCompatActivity() {
 
             userRef.child("coins").addListenerForSingleValueEvent(object : ValueEventListener {
                 override fun onDataChange(snapshot: DataSnapshot) {
-                    val coinCount = snapshot.getValue(Int::class.java) ?: 100
-                    coinCountTextView.text = coinCount.toString()
+                    val coinCount = snapshot.getValue(Int::class.java)
+                    if (coinCount != null) {
+                        coinCountTextView.text = coinCount.toString()
+                    } else {
+                        coinCountTextView.text = "0" // أو أي قيمة افتراضية أخرى
+                    }
                 }
 
                 override fun onCancelled(error: DatabaseError) {
