@@ -6,13 +6,81 @@
     android:layout_height="match_parent"
     tools:context=".HomeFragment">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/home_fragment_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginTop="75dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_ad"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/edit_back"
+            android:backgroundTint="#FF3E3E"
+            android:drawableStart="@drawable/watch_an_ad_5"
+            android:drawablePadding="-1090dp"
+            android:paddingHorizontal="-470dp"
+            android:text="Watch an ad"
+            android:textStyle="bold|italic" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_daily_reward"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edit_back"
+            android:backgroundTint="#FFA500"
+            android:drawableStart="@drawable/daily_reward_1"
+            android:drawablePadding="-1090dp"
+            android:paddingHorizontal="-470dp"
+            android:text="Daily reward"
+            android:textStyle="bold|italic" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_spin_wheel"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edit_back"
+            android:backgroundTint="#90EE90"
+            android:drawableStart="@drawable/daily_reward_1"
+            android:drawablePadding="-1090dp"
+            android:paddingHorizontal="-470dp"
+            android:text="spin wheel"
+            android:textStyle="bold|italic" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_tasks"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edit_back"
+            android:backgroundTint="#40E0D0"
+            android:drawableStart="@drawable/daily_reward_1"
+            android:drawablePadding="-1090dp"
+            android:paddingHorizontal="-470dp"
+            android:text="Tasks"
+            android:textStyle="bold|italic" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_store"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/edit_back"
+            android:backgroundTint="#9370DB"
+            android:drawableStart="@drawable/daily_reward_1"
+            android:drawablePadding="-1090dp"
+            android:paddingHorizontal="-470dp"
+            android:text="Shop"
+            android:textStyle="bold|italic" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

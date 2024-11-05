@@ -33,10 +33,6 @@
             android:textColor="#fff"
             android:textSize="35sp"
             android:textStyle="bold|italic" />
-
-         <!-- ضع هنا أيقونة العملة -->
-
-        <!-- باقي العناصر داخل شريط العملات -->
     </LinearLayout>
 
     <androidx.fragment.app.FragmentContainerView
